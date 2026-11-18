@@ -1,0 +1,6 @@
+build: pnpm install --frozen-lockfile && pnpm build
+source: false
+artifacts: [dist, server, package.json]
+services:
+  web:
+    command: node server/box.mjs
