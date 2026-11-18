@@ -1,0 +1,8 @@
+services:
+  web:
+    command: pnpm dev --port "$PORT" --strictPort --host 127.0.0.1
+    port: 5173
+    portal:
+      url: /
+      title: Places, Pilates mockup
+      description: Vite dev server for the Places, Pilates website mockup.

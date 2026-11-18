@@ -1,0 +1,92 @@
+/*
+ * Places, Pilates design tokens, from the supplied brand guide.
+ *
+ * Color: only the five brand colors (plus white), with burgundy as the ink.
+ *
+ * Type:
+ * - Primary/display: Choret Fudyng (Alit Design; the guide spells it
+ *   "Chores Fudyng"). Regular style, from the vendor's licensed WOFF2
+ *   (Creative Market webfont license; see docs/ASSETS.md).
+ * - Secondary: Code by Fontfabric (free commercial EULA, web use allowed).
+ *   It is an all-caps face, so it carries labels, navigation, buttons, and
+ *   thin statements, as in the guide's "PILATES".
+ * - Body paragraphs use Instrument Sans for readability; the guide does not
+ *   name a text face.
+ */
+@font-face {
+  font-family: 'Choret Fudyng';
+  src: url('/fonts/choret-fudyng-regular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Code';
+  src: url('/fonts/code-light.woff2') format('woff2');
+  font-weight: 100 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Code';
+  src: url('/fonts/code-bold.woff2') format('woff2');
+  font-weight: 500 900;
+  font-display: swap;
+}
+
+:root {
+  --pp-brick: #a72913;
+  --pp-salmon: #faa994;
+  --pp-blush: #fcd3c5;
+  --pp-gold: #e8af59;
+  --pp-burgundy: #571310;
+  --pp-burgundy-deep: var(--pp-burgundy);
+  /* Aliases kept for existing rules: white paper and burgundy ink only. */
+  --pp-cream: #ffffff;
+  --pp-muted: var(--pp-burgundy);
+
+  --pp-font-display: 'Choret Fudyng', ui-rounded, system-ui, sans-serif;
+  --pp-font-code: 'Code', 'Futura', 'Century Gothic', ui-sans-serif, sans-serif;
+  --pp-font-secondary: 'Instrument Sans Variable', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+  --pp-font-hand: 'Caveat Variable', 'Caveat', 'Bradley Hand', cursive;
+}
+
+[data-theme='places'] {
+  color-scheme: light;
+
+  --ui-canvas: var(--pp-cream);
+  --ui-surface: var(--pp-blush);
+  --ui-fg: var(--pp-burgundy);
+  --ui-fg-muted: var(--pp-muted);
+  --ui-line: var(--pp-blush);
+  --ui-line-strong: var(--pp-burgundy);
+  --ui-primary: var(--pp-brick);
+  --ui-primary-hover: var(--pp-burgundy);
+  --ui-on-primary: #ffffff;
+  --ui-focus: var(--pp-brick);
+  --ui-danger: var(--pp-brick);
+  --ui-success: var(--pp-burgundy);
+
+  --ui-inverse-color-scheme: dark;
+  --ui-inverse-canvas: var(--pp-burgundy);
+  --ui-inverse-surface: var(--pp-burgundy);
+  --ui-inverse-fg: var(--pp-blush);
+  --ui-inverse-fg-muted: var(--pp-salmon);
+  --ui-inverse-line: var(--pp-brick);
+  --ui-inverse-line-strong: var(--pp-salmon);
+  --ui-inverse-primary: var(--pp-salmon);
+  --ui-inverse-primary-hover: var(--pp-blush);
+  --ui-inverse-on-primary: var(--pp-burgundy);
+  --ui-inverse-focus: var(--pp-gold);
+  --ui-inverse-danger: var(--pp-salmon);
+  --ui-inverse-success: var(--pp-blush);
+
+  --ui-font-sans: var(--pp-font-secondary);
+  --ui-font-display: var(--pp-font-display);
+  --ui-heading-weight: 400;
+  --ui-heading-tracking: 0;
+  --ui-button-weight: 600;
+  --ui-button-tracking: 0.02em;
+  --ui-button-case: none;
+
+  --ui-radius-control: 999px;
+  --ui-radius-card: 1.25rem;
+  --ui-shadow-card: 0 1px 2px rgb(87 19 16 / 0.08), 0 10px 30px rgb(87 19 16 / 0.12);
+}
